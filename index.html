@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+
+<head>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <script>
+        pubsub.subscribe("notify", function(args) {
+            console.log(args, " user1!");
+        });
+
+        pubsub.subscribe("notify", function(args) {
+            console.log(args, " user2 !");
+        });
+
+        pubsub.publish("notify", "Chào Bạn");
+    </script>
+</body>
+
+</html>
